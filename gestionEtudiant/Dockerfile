@@ -14,8 +14,8 @@ COPY src /app/src
 # Étape 5 : Compiler et construire l'application Spring Boot
 RUN mvn clean package -DskipTests
 
-# Étape 6 : Utiliser une image légère avec seulement JRE pour l'exécution
-FROM openjdk:17-jre-slim
+# Étape 6 : Utiliser une image OpenJDK 17 disponible pour l'exécution
+FROM openjdk:17-jre
 
 # Étape 7 : Définir le répertoire de travail dans l'image finale
 WORKDIR /app
