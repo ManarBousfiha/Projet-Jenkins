@@ -15,7 +15,7 @@ COPY src /app/src
 RUN mvn clean package -DskipTests
 
 # Étape 6 : Utiliser une image OpenJDK 17 disponible pour l'exécution
-FROM openjdk:17-jre
+FROM openjdk:17
 
 # Étape 7 : Définir le répertoire de travail dans l'image finale
 WORKDIR /app
